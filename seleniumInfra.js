@@ -115,7 +115,8 @@ class SelenuimInfra{
             element = await this.driver.findElement(By[locatorType](locatorValue))
             return true
         }
-        catch{
+        catch(error)
+        {
             return false
         }
     }
@@ -132,7 +133,8 @@ class SelenuimInfra{
             }
             console.log(`Find element with ${locatorType} = ${locatorValue} `)
         }
-        catch{
+        catch(error)
+        {
             console.error(`Got error while trying to find element with ${locatorType} = ${locatorValue}`)
         }
         return element
@@ -150,7 +152,8 @@ class SelenuimInfra{
             }
             return element
         }
-        catch{
+        catch(error)
+        {
             console.error(`Got error while trying to find element with ${locatorType} = ${locatorValue}`)
         }
     }
